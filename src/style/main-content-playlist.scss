@@ -1,0 +1,127 @@
+@import "./constants.scss";
+
+.site-main {
+  .playlist-container {
+
+    .video-preview {
+      float: left;
+      padding: 1rem;
+      box-sizing: border-box;
+
+      .preview {
+        a {
+            background-color: black;
+            width: 100%;
+            padding-top: 56.25%;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              max-width: 100%;
+              max-height: 100%;
+              min-width: 100%;
+              min-height: 100%;
+              margin: auto;
+              transition: 0.4s linear;
+            }
+            &:hover img{
+                transform: scale(1.05);
+            }
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            background-color: $videoPreviewDurationTextColor;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem;
+            border-radius: 2px;
+            opacity: 0;
+            transition: 0.2s linear;
+        }
+      }
+        &:hover .duration {
+            opacity: 1;
+        }
+      a {
+        text-decoration: none;
+        outline: none;
+        color: $categoryTextColor;
+      }
+      @media (max-width: 412px) {
+        width: 100%;
+      }
+
+      @media (min-width: 413px) and (max-width: 768px) {
+        width: 50%;
+      }
+
+      @media (min-width: 769px) and (max-width: 991px) {
+        width: 33.33333333%;
+      }
+
+      @media (min-width: 992px) {
+        width: 25%;
+      }
+    }
+    .title {
+
+      a {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: bold;
+            line-height: 2rem;
+            font-size: 0.875rem;
+      }
+      &:hover a {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      li {
+        list-style: none;
+        font-size: 1rem;
+        img {
+          width: 1rem;
+          height: 1rem;
+          border: 1px solid;
+        }
+      }
+      li.author {
+        float: left;
+        a {
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        img, span {
+          vertical-align: bottom;
+        }
+        img {
+            border-radius: 2px;
+        }
+        span {
+            padding: 0 0.25rem;
+            font-size: 0.75rem;
+        }
+        &:hover a {
+          text-decoration: underline;
+        }
+      }
+      li.favorite {
+        float: right;
+      }
+    }
+  }
+}
+

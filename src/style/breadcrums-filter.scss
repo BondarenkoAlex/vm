@@ -1,0 +1,98 @@
+@import './constants.scss';
+
+.breadcrums-filter {
+  background-color: $breadcrumsBackgroundColor;
+  border-bottom: 1px solid $breadcrumsBorderColor;
+  //border-bottom-width: 1px;
+  ul {
+    li {
+      list-style: none;
+      float: left;
+      border-bottom: 2px solid transparent;
+      a {
+        text-decoration: none;
+        outline: none;
+        padding: 0 0.5rem;
+        color: $breadcrumsTextColor;
+        display: inline-block;
+      }
+    }
+  }
+  ul.breadcrums-category {
+    //padding-left: 16px;
+    float: left;
+    li {
+      font-size: 1.125rem;
+      a {
+        padding: 16px 1rem 16px 0.1rem;
+      }
+      &:hover a {
+        text-decoration: underline;
+      }
+      &::before {
+        //content: "\003C";
+        content: " ";
+        color: $breadcrumsTextColor;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        width: 0.5rem;
+        height: 0.5rem;
+        display: inline-block;        
+        transform: rotateZ(45deg);        
+        margin-left: 2px;
+      }
+    }
+  }
+    ul.filter {
+      //padding-right: 16px;
+      border-left: 1px solid $breadcrumsBorderColor;
+      float: right;
+      li {
+        font-size: 0.75rem;
+        a {
+          padding: 19px 0.5rem;
+        }
+        &.filter-days.active,
+        &.filter-days:hover {
+          border-bottom: 2px solid $reduxColor;
+        }
+        &.filter-duration.active,
+        &.filter-duration:hover {
+          border-bottom: 2px solid $reduxColor + 100;
+        }
+      }
+    }
+
+    //menu style for mobile
+    @media (max-width: 800px) {
+      /*.label-for-checkbox-filter {
+        display: block;
+      }*/
+      ul.filter {
+        display: block;
+        border: 5px solid green;
+      }
+      /*ul.search-favorite_video-account-container {
+        clear: both;
+        float: none;
+        li {
+          display: none;
+        }
+      }*/
+      /*.checkbox-for-filter-menu:checked + ul.filter {
+        display: block;
+        float: none;
+        clear: both;
+        text-align: center;
+        li {
+          width:  20%;
+        }
+      }*/
+
+
+    }
+  
+
+
+
+}
