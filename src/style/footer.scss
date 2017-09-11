@@ -3,7 +3,7 @@
 footer.site-footer {
   background-color: $breadcrumsBackgroundColor;
   color: $breadcrumsTextColor;
-  font-size: 0.75rem;    
+  font-size: 0.75rem;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -11,6 +11,7 @@ footer.site-footer {
   ul {
     li {
       list-style: none;
+      padding: 14px 0;
     }
     a {
       color: $breadcrumsTextColor;
@@ -18,9 +19,9 @@ footer.site-footer {
   }
   ul.copyright {
     float: left;
-    li {
+    /*li {
       padding: 14px 0;
-    }
+    }*/
   }
   ul.connect {
     float: right;
@@ -29,18 +30,18 @@ footer.site-footer {
         text-decoration: none;
         outline: none;
         vertical-align: middle;
-        padding: 6px 5px;
+        /*padding: 6px 5px;*/
       }
       &:hover a {
         text-decoration: underline;
       }
-      img {
+      /*img {
         vertical-align: middle;
         width: 32px;
         height: 32px;
         border-radius: 16px;
         margin: 4px 0;
-      }
+      }*/
     }
   }
 }

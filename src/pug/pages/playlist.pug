@@ -1,5 +1,9 @@
 //-
-extends ../layouts/playlist.pug
+extends ../layouts/base.pug
 
 block breadcrums
     include ../includes/breadcrums/subcategory.pug
+block titleCategory
+    include ../includes/main/playlist-title.pug
+block categories
+    include ../includes/main/playlist-content.pug

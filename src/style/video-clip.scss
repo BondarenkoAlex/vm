@@ -2,7 +2,6 @@
 
 .site-main {
   .video-clip-wrapper {
-    padding: 0 1rem;
     box-sizing: border-box;
     @media (min-width: 768px) {
       width: 100%;
@@ -137,39 +136,24 @@
           border-bottom: 1px solid #d6d6d6;
           margin: 0.5rem 0;
           padding-bottom: 0.5rem;
-
-          &:after {
-            content: "Reply";
-            display: block;
-            text-align: right;
-            padding-top: 0.5rem;
-            cursor: pointer;
-            font-size: 0.875rem;
-            color: $categoryTextColor;
-            //border-bottom: 1px solid #d6d6d6;
-            //padding-bottom: 0.5rem;
-          }
         }
-        .comment.reply-text {
+        .comment.comment-add-reply-wrapper {
           border-bottom: none;
-          form {
+
+          form.comment {
             max-width: 100%;
-            margin-right: 7px;
           }
-          textarea{
-            font-size: 0.875rem;
+          textarea {
+            font-size: 1rem; //0.875rem;
             border-radius: 2px;
             border-color: $categoryTextColor;
             width: 100%;
             resize: vertical;
+            box-sizing: border-box;
           }
-          div.button-add {
-            text-align: right;
-            padding: 0.25rem 0;
-          }
-          &:after {
+          /*&:after {
             content: normal;
-          }
+          }*/
         }
       }
     }
@@ -194,8 +178,10 @@
       li {
         list-style: none;
         padding: 0 1rem;
+        @media (max-width: 414px) {
+          padding: 0.5rem;
+        }
         margin: 1rem 0;
-
         box-sizing: border-box;
         vertical-align: top;
         @media (min-width: 568px) and (max-width: 768px) {

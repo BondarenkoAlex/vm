@@ -1,7 +1,6 @@
 main.site-main.clearfix
     .container
-        //-.wrap-container
-        .video-clip-wrapper
+        .wrap-container.video-clip-wrapper
             .video-clip
                 .title
                     h1 Are You Lost In The World Like Me?
@@ -74,6 +73,8 @@ main.site-main.clearfix
                                             section.text
                                                 p Looooovvvveeeeeee this! Such a great quality and aesthetic.
                                                 p cute all the way.
+                            div.button-wrapper.text-align-right
+                                button.btn-as-text(type="button") Reply
                         .comment.clearfix
                             .comment-wrapper.clearfix
                                 .author-logo
@@ -111,6 +112,17 @@ main.site-main.clearfix
                                             section.text
                                                 p Looooovvvveeeeeee this! Such a great quality and aesthetic.
                                                 p cute all the way.
+                            .comment.comment-add-reply-wrapper.clearfix
+                                .comment-wrapper.clearfix
+                                    .author-logo
+                                        img(src=require("../../../images/account-logo.jpg"))
+                                    .body-wrapper
+                                        .body
+                                            form.comment(name="commentForm")
+                                                textarea(placeholder="New reply" rows="4")
+                                                div.button-wrapper.text-align-right
+                                                    button.btn-default(type="button") Cancel
+                                                    button.btn-default(type="submit") Reply
                         .comment.clearfix
                             .comment-wrapper.clearfix
                                 .author-logo
@@ -123,6 +135,8 @@ main.site-main.clearfix
                                         section.text
                                             p Looooovvvveeeeeee this! Such a great quality and aesthetic.
                                             p cute all the way.
+                            div.button-wrapper.text-align-right
+                                button.btn-as-text(type="button") Reply
                         .comment.clearfix
                             .comment-wrapper.clearfix
                                 .author-logo
@@ -137,16 +151,18 @@ main.site-main.clearfix
                                             p Excellent work indeed,
                                             p Lovely story and great execution,
                                             p I really like that.
-                        .comment.reply-text.clearfix
+                            div.button-wrapper.text-align-right
+                                button.btn-as-text(type="button") Reply
+                        .comment.comment-add-reply-wrapper.clearfix
                             .comment-wrapper.clearfix
                                 .author-logo
                                     img(src=require("../../../images/account-logo.jpg"))
                                 .body-wrapper
                                     .body
-                                        form(name="commentForm")
+                                        form.comment(name="commentForm")
                                             textarea(placeholder="New comment" rows="4")
-                                        div.button-add
-                                            a(href="javascript:document.commentForm.submit();") Add comment
+                                            div.button-wrapper.text-align-right
+                                                button.btn-default(type="submit") Add comment
         aside.related
             .wrap-container
                 h3 Related video

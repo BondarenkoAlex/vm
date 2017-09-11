@@ -1,17 +1,40 @@
 section.breadcrums-filter.clearfix
     .container
-        .wrap-container
-            ul.filter
-                li.filter-days
-                    a(href="#") 7 days
-                li.filter-days.active
-                    a(href="#") 30 days    
-                li.filter-days
-                    a(href="#") 90 days    
-                li.filter-duration
-                    a(href="#") Short   
-                li.filter-duration.active
-                    a(href="#") Long 
-            block breadcrums    
+        .wrap-container.clearfix
+            block breadcrums
+                ul.breadcrums-category.clearfix
+                    li.breadcrums-items-container
+                        a(href="#") Categories
+            ul.filter-container.clearfix
+                li.filter-items-container.filter-items-container-showby.filter-items-container-active
+                    a.filter-items-container-title.icon-chevron.icon-chevron-down(href="#") 10
+                    ul.filter-item.filter-item-showby-container
+                        li.filter-entity.filter-item-showby
+                            a.filter-entity-link(href="#") Show by
+                        li.filter-entity.filter-item-showby
+                            a.filter-entity-link(href="#") 10
+                        li.filter-entity.filter-item-showby
+                            a.filter-entity-link(href="#") 24
+                        li.filter-entity.filter-item-showby
+                            a.filter-entity-link(href="#") 100
+                li.filter-items-container.filter-items-container-duration.filter-items-container-open
+                    a.filter-items-container-title.icon-chevron.icon-chevron-down(href="#") Duration
+                    ul.filter-item.filter-item-duration-container
+                        li.filter-entity.filter-item-duration
+                            a.filter-entity-link(href="#") Short
+                        li.filter-entity.filter-item-duration
+                            a.filter-entity-link(href="#") Medium
+                        li.filter-entity.filter-item-duration
+                            a.filter-entity-link(href="#") Long
+                li.filter-items-container.filter-items-container-period
+                    a.filter-items-container-title.icon-chevron.icon-chevron-down(href="#") Period
+                    ul.filter-item.filter-item-period-container
+                        li.filter-entity.filter-item-period
+                            a.filter-entity-link(href="#") 7days
+                        li.filter-entity.filter-item-period
+                            a.filter-entity-link(href="#") 30days
+                        li.filter-entity.filter-item-period
+                            a.filter-entity-link(href="#") 90days
+
 
 

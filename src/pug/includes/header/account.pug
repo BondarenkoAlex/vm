@@ -1,8 +1,14 @@
-li.account
-    a.pointer-events-none(href="#")
+//- li.nav-header-account
+    a.nav-header-pointer-events-none(href="#")
         img(src=require("../../../images/account-logo.jpg"))        
-li.log-in-out
-    a(href="#")
-        img(src=require("../../../images/log-out.png"))
-        span.text Log Out
+//- li.nav-header-log-in-out
+    a.nav-header-user(href="#")
+        div.icon-chevron.icon-chevron-down
+            img(src=require("../../../images/log-out.png"))
+        span.nav-header-text Log Out
 
+li.nav-header-log-in-out
+    a.nav-header-user(href="#")
+        div.icon-chevron.icon-chevron-down
+            img(src=require("../../../images/account-logo.jpg"))
+        span.nav-header-text Log Out

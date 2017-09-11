@@ -1,7 +1,10 @@
+@import './constants.scss';
+
 html {
   height: 100%;
   min-width: 360px;
 }
+
 body {
   font-family: Verdana, Geneva, sans-serif;
   position: relative;
@@ -34,18 +37,12 @@ h6 {
   font-size: 0.67rem;
 }
 
-/*.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}*/
-
 .clearfix::before,
 .clearfix::after,
 .clearfix-left::before,
 .clearfix-left::after,
 .clearfix-right::before,
-.clearfix-right::after{
+.clearfix-right::after {
   display: table;
   content: "";
 }
@@ -62,23 +59,158 @@ h6 {
   clear: right;
 }
 
-.pointer-events-none{
+.pointer-events-none {
   pointer-events: none;
 }
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right
+}
+
+.icon-chevron-up:after {
+  content: "\25B2";
+}
+.icon-chevron-down:after {
+  content: "\25BC";
+}
+
+/*.icon-chevron-color-white:after {
+  color: white;
+}
+
+.icon-chevron-font-size-0375rem:after {
+  font-size: 0.375rem;
+}*/
 
 .container {
   max-width: 1170px;
   margin: 0 auto;
 
-  /*@media (min-width: 1224px) {
-    padding: 0 5rem;
-  }*/
   .wrap-container {
     padding: 0 1rem;
     @media (max-width: 414px) {
-      padding: 0;
+      padding: 0 0.5rem;
     }
   }
 }
+
+//label and checkbox for mobile menu
+.label-for-checkbox, .checkbox-for-menu {
+  display: none;
+  float: right;
+  font-size: 2rem;
+  color: white;
+  padding: 8px 0;
+  cursor: pointer;
+}
+//end ------ label and checkbox for mobile menu
+
+//popover
+.popover-wrap-content {
+  display: none;
+  position: absolute;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+  z-index: 99;
+
+  &.popover-open {
+    display: block;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top: 0;
+    box-sizing: border-box;
+  }
+
+  &.popover-right {
+    right: 0rem;
+
+    &:before {
+      top: -7px;
+      right: 15px;
+      border-width: 7px;
+      border-bottom: 7px solid #999;
+    }
+
+    &:after {
+      top: -6px;
+      right: 15px;
+      border-width: 7px;
+      border-bottom: 7px solid #fff;
+    }
+  }
+}
+
+.popover-content-user {
+  width: 8rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #00adef;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 2px;
+  font-size: 0.875rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+//end ------ popover
+
+//button
+.button-wrapper {
+  padding: 0.25rem 0;
+}
+button.btn-default{
+  position: relative;
+  border: none;
+  border-radius: 2px;
+  font-size: .875rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+button.btn-as-text{
+  padding: 0;
+  font-size: .875rem;
+  border: none;
+  outline: 0;
+  background: 0 0;
+  box-shadow: none;
+  cursor: pointer;
+  color: $categoryTextColor;
+}
+//end ----- button
+
+
 
 

@@ -1,6 +1,14 @@
 .player {
   background-color: #000;
 
+  .container {
+    .wrap-container {
+      @media (max-device-width: 1170px) {
+        padding: 0;
+      }
+    }
+  }
+
   .responsive-wrapper-iframe {
     margin: 0 auto;
     /*width: 80%;*/

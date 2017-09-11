@@ -1,6 +1,7 @@
 @import "./constants.scss";
+
 .site-main {
-  .category-title {
+  .categories-title {
     color: $categoryTextColor;
     h2 {
       padding: 1rem 0 0;
@@ -10,13 +11,16 @@
   .category {
     float: left;
     padding: 1rem;
+    @media (max-width: 414px) {
+      padding: 0.5rem;
+    }
     box-sizing: border-box;
 
-    @media (max-width: 412px) {
+    @media (max-width: 414px) {
       width: 100%;
     }
 
-    @media (min-width: 413px) and (max-width: 768px) {
+    @media (min-width: 415px) and (max-width: 768px) {
       width: 50%;
     }
 
@@ -59,12 +63,12 @@
         line-height: 1.25rem;
       }
 
-      img.preview {
+      img.category-preview {
         max-width: 100%;
       }
     }
   }
-  .subcategory {
+  /*.subcategory {
     .category {
       img.category-logo {
         display: none;
@@ -81,5 +85,5 @@
         margin-top: 0;
       }
     }
-  }
+  }*/
 }
